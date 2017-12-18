@@ -10,6 +10,8 @@ import { HttpRequestComponent } from './http-request/http-request.component';
 import { DataService } from './data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
+import { Angular5templatedrivenComponent } from './angular5templatedriven/angular5templatedriven.component';
+import { Angular5reactiveComponent } from './angular5reactive/angular5reactive.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { TemplateDrivenComponent } from './template-driven/template-driven.compo
     FormRuntimeComponent,
     DynamicFormsComponent,
     HttpRequestComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    Angular5templatedrivenComponent,
+    Angular5reactiveComponent
   ],
   imports: [
     BrowserModule,

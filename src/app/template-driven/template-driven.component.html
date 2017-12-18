@@ -2,7 +2,7 @@
   <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
     <div class="panel panel-info">
       <div class="panel-heading">
-        <div class="panel-title">Runtime Change validation Form</div>
+        <div class="panel-title">Templatedriven Form</div>
       </div>
       <div class="panel-body">
         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
@@ -11,7 +11,7 @@
             <span class="input-group-addon">
               <i class="glyphicon glyphicon-user"></i>
             </span>
-            <input required minlength="3" maxlength="10" class="form-control" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)"
+            <input placeholder="FirstName" required minlength="3" maxlength="10" class="form-control" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)"
               id="firstName" type="text">
           </div>
           <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
@@ -23,7 +23,7 @@
             <span class="input-group-addon">
               <i class="glyphicon glyphicon-user"></i>
             </span>
-            <input required class="form-control" ngModel name="lastName" #lastName="ngModel" id="lastName" (change)="loglast(lastName)"
+            <input placeholder="LastName" required class="form-control" ngModel name="lastName" #lastName="ngModel" id="lastName" (change)="loglast(lastName)"
               type="text">
           </div>
           <div class="alert alert-danger" *ngIf="!lastName.valid && lastName.touched">Last Name is Required</div>

@@ -1,0 +1,31 @@
+<div class="container">
+  <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <div class="panel-title">Angular 5 Reactive Form</div>
+      </div>
+      <div class="panel-body">
+        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+        <form [formGroup]="nameForm" novalidate>
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input placeholder="FirstName" class="form-control" formControlName="firstname">
+          </div>
+          <div class="alert" *ngIf="!nameForm.controls['firstname'].valid && nameForm.controls['firstname'].touched">FirstName Field Required</div>
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input placeholder="LastName" class="form-control" formControlName="lastname">
+          </div>
+          <div class="alert" *ngIf="!nameForm.controls['lastname'].valid && nameForm.controls['lastname'].touched">LastName Field Required</div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="nameForm.value.firstname && nameForm.value.lastname">
+    <h3>Hello {{nameForm.value.firstname}} {{nameForm.value.lastname}}</h3>
+  </div>
