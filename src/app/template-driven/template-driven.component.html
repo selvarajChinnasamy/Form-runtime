@@ -1,0 +1,36 @@
+<div class="container">
+  <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <div class="panel-title">Runtime Change validation Form</div>
+      </div>
+      <div class="panel-body">
+        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+        <form class="form-horizontal">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input required minlength="3" maxlength="10" class="form-control" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)"
+              id="firstName" type="text">
+          </div>
+          <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+            <div *ngIf="firstName.errors.required">First Name is Requied</div>
+          <div *ngIf="firstName.errors.minlength">Min is 3</div>
+          <div *ngIf="firstName.errors.maxlength">Max is 10</div>
+        </div>
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input required class="form-control" ngModel name="lastName" #lastName="ngModel" id="lastName" (change)="loglast(lastName)"
+              type="text">
+          </div>
+          <div class="alert alert-danger" *ngIf="!lastName.valid && lastName.touched">Last Name is Required</div>
+          <br>
+          <input id="btn-login" type="submit" value="Submit" class="btn btn-success">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
