@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { Angular5templatedrivenComponent } from './angular5templatedriven/angular5templatedriven.component';
 import { Angular5reactiveComponent } from './angular5reactive/angular5reactive.component';
+import { CustomvalidationComponent } from './customvalidation/customvalidation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { Angular5reactiveComponent } from './angular5reactive/angular5reactive.c
     HttpRequestComponent,
     TemplateDrivenComponent,
     Angular5templatedrivenComponent,
-    Angular5reactiveComponent
+    Angular5reactiveComponent,
+    CustomvalidationComponent
   ],
   imports: [
     BrowserModule,
