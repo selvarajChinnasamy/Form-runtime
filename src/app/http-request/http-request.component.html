@@ -1,4 +1,20 @@
-<p *ngIf="jobs">
-{{jobs.login}}
-</p>
-
+<div class="container" *ngIf="jobs">
+    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Github Selvaraj</div>
+            </div>
+            <div class="panel-body">
+                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                <p>
+                    Name : {{jobs.login}}
+                    <br> Id : {{jobs.id}}
+                    <br> Avatar_url : {{jobs.avatar_url}}
+                    <br> Url : {{jobs.url}}
+                    <br> repo : {{jobs.repos_url}}
+                    <br> Created at : {{jobs.created_at}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -6,7 +6,7 @@ import { GitData } from './data';
 export class DataService {
 
   constructor(private _http:HttpClient) { }
-  getJobs(){
-    return this._http.get('https://api.github.com/users/selvarajchinnasamy');
+  getJobs(){ // https://api.github.com/users/selvarajchinnasamy
+    return this._http.get('assets/data.json');
    }
 }
